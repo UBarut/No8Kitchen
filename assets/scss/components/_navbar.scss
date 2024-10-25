@@ -1,0 +1,441 @@
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    // height: 66px;
+    display: flex;
+    justify-content: center;
+    z-index: 50;
+    background-color: $mainColorCyan;
+    box-shadow: 0px 2px 12px 6px rgba(88, 100, 115, 0.07);
+
+    * {
+        color: $mainColorBlueDark;
+    }
+
+    a {
+        &:hover {
+            * {
+                color: $mainColorOrangeDark;
+            }
+        }
+    }
+
+    // &.no8kitchen {
+    //     --mainColorCyan: #ffeecd;
+    //     --mainColorBlueDark: #ffd194;
+    //     --mainColorOrangeLight: #d9edde;
+    //     --mainColorOrangeDark: #0097b2;
+    // }
+}
+
+
+// transition: background-image .4s linear;
+// background-color: $no08-main-color-01;
+// background-image: linear-gradient(90deg, $no08-main-color-01 0%, $no08-main-color-02 100%);
+
+// &:has(nav .bottom-nav ul li:first-child a:hover) {
+//     background-image: linear-gradient(90deg, $no08-main-color-01 50%, $no08-main-color-02 100%);
+// }
+
+// &:has(nav .bottom-nav ul li:last-child a:hover) {
+//     background-image: linear-gradient(90deg, $no08-main-color-01 0%, $no08-main-color-02 50%);
+// }
+
+nav {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
+    height: inherit;
+    flex-direction: column;
+    padding: 0;
+    @include clamp(padding-left, 112, 20, 1280, 1080);
+    @include clamp(padding-right, 112, 20, 1280, 1080);
+
+    .top-nav {
+        height: 60px;
+        // background-color: $no08-main-color-01;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+
+        .left {
+            height: inherit;
+            display: inherit;
+            justify-content: inherit;
+            gap: 12px;
+            // color: $white;
+
+            .locations {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .location {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    cursor: pointer;
+
+                    &:hover {
+                        img {
+                            content: url('/assets/img/icon/locationOrange.svg');
+                        }
+                    }
+
+                    span {
+                        font-size: 12px;
+                    }
+
+                    img {
+                        width: 24px;
+                        height: auto;
+                    }
+                }
+            }
+
+            .phone {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                cursor: pointer;
+
+                &:hover {
+                    img {
+                        content: url('/assets/img/icon/phoneOrange.svg');
+                    }
+                }
+
+                span {
+                    font-size: 12px;
+                }
+
+                img {
+                    width: 22px;
+                    height: auto;
+                }
+            }
+        }
+
+        .middle {
+            a {
+                height: 30px;
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                span {
+                    font-family: "TanTheWhistling" !important;
+                    font-size: 20px;
+                    font-weight: 900;
+                    text-decoration: underline !important;
+                    text-underline-offset: 4px;
+                }
+            }
+        }
+
+        .right {
+            height: inherit;
+            display: inherit;
+            justify-content: inherit;
+            align-items: center;
+            gap: 12px;
+            // color: $white;
+
+            .login {
+                border: 1px solid $mainColorBlueDark;
+                border-radius: 10px 0px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 4px 8px;
+                max-height: 30px;
+                background-color: $mainColorBlueDark;
+                transition: all .3s ease-out;
+
+                span {
+                    color: $mainColorCyan;
+                    font-size: 12px;
+                }
+
+                &:hover {
+                    border: 1px solid $mainColorOrangeDark;
+                    background-color: $mainColorOrangeDark;
+
+                    span {
+                        color: $mainColorOrangeLight;
+                    }
+                }
+            }
+
+            .social-medias {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+
+                a {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .hamburger-menu {
+                display: none;
+                cursor: pointer;
+
+                &.active {
+                    i::before {
+                        content: "\f00d" !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-nav {
+        // height: 60px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        ul {
+            height: inherit;
+            display: flex;
+            gap: 16px;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    cursor: pointer;
+
+                    span {
+                        font-family: 'TanTheWhistling' !important;
+                        // font-size: 16px;
+                        font-size: 24px;
+                        font-weight: 600;
+                        // color: $white;
+                    }
+
+                    img {
+                        // height: 50px;
+                        height: 100px;
+                        width: auto;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-links {
+        // height: 50px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+
+        .logo {
+            // height: 40px;
+            height: 30px;
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: inherit;
+                height: inherit;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+
+            span {
+                font-family: 'TanTheWhistling' !important;
+                font-size: 20px;
+                font-weight: 900;
+            }
+
+            &.other-site {
+                span {
+                    font-size: 16px;
+                    text-decoration: underline !important;
+                    text-underline-offset: 4px;
+                }
+            }
+        }
+
+        .sub-links {
+            height: inherit;
+            display: flex;
+            gap: 16px;
+            margin: 0 auto;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &.mobile {
+                    display: none;
+                }
+
+                a {
+                    span {
+                        font-family: 'TanTheWhistling' !important;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+
+                &.active {
+                    a {
+                        span {
+                            color: $mainColorOrangeDark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+    nav {
+        .top-nav {
+            height: 40px;
+            .middle {
+                display: none;
+            }
+            .right {
+                .hamburger-menu {
+                    display: block;
+                }
+            }
+        }
+
+        .bottom-nav {
+            height: 60px;
+            ul {
+                li {
+                    a {
+                        span {
+                            font-size: 16px;
+                        }
+                        img {
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-links {
+            .sub-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                height: calc(100dvh - 80px);
+                flex-direction: column;
+                background-color: $mainColorOrangeLight;
+                padding: 20px 16px;
+                gap: 20px;
+
+                li {
+                    justify-content: flex-start;
+                    width: 100%;
+                    border-bottom: 1px solid $mainColorBlueDark;
+                }
+
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    nav {
+        .top-nav {
+            justify-content: flex-end;
+
+            .left {
+                display: none;
+            }
+        }
+
+        .bottom-nav {
+            height: 60px;
+            ul {
+                gap: 8px;
+                li {
+                    a {
+                        gap: 8px;
+                        span {
+                            font-size: 10px;
+                        }
+                        img {
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .nav-links {
+            .logo {
+                &.other-site {
+                    span {
+                        font-size: 14px;
+                    }
+                }
+
+                span {
+                    font-size: 16px;
+                }
+            }
+
+            .sub-links {
+                padding: 20px 16px;
+                gap: 12px;
+
+                li {
+                    justify-content: flex-start;
+                    width: 100%;
+
+                    &.mobile {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        border-bottom: unset;
+
+                        &:first-of-type {
+                            margin-top: 32px;
+                        }
+
+                        .main-menu {
+                            text-underline-offset: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

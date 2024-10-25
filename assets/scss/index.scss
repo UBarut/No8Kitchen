@@ -1,0 +1,20 @@
+@import 'root/reset';
+@import 'components/navbar';
+@import 'components/footer';
+@import 'components/common';
+@import 'components/slider';
+@import 'components/card';
+@import 'components/modal';
+
+@include Page-Detail;
+@include About;
+@include Card-List;
+@include Detail-Content;
+@include Login-Popup;
+@include Banner;
+@include Type-01-v1;
+@include Type-01-v2;
+@include Type-02-v2;
+@include Type-03-v2;
+@include Type-04;
+@include Type-05;

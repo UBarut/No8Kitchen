@@ -1,0 +1,67 @@
+
+// @mixin font($font-family, $font-file) {
+//     @font-face {
+//         font-family: $font-family;
+//         src: url($font-file + ".woff2");
+//         src: url($font-file + ".eot?#iefix") format("embedded-opentype"), url($font-file + ".woff2") format("woff2")
+//             url($font-file + ".ttf") format("truetype"), url($font-file + ".svg#" + $font-family) format("svg");
+//     }
+// }
+
+
+// @include font("Inter", "../fonts/Inter_18pt-Regular");
+// @include font("TanTheWhistling", "../fonts/tan-the-whistling");
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter_18pt-Regular.ttf");
+}
+@font-face {
+    font-family: "TanTheWhistling";
+    src: url("../fonts/tan-the-whistling.woff2");
+}
+
+
+
+
+// Font Design
+// parameters: large font-size, small font-size
+$font-sizes: (
+    "1412": (14, 12),
+    "1614": (16, 14),
+    "1816": (18, 16),
+    "2016": (20, 16),
+    "2416": (24, 16),
+    "3220": (32, 20),
+    "2418": (24, 18),
+    "2420": (24, 20),
+    "3224": (32, 24),
+    "4032": (40, 32),
+);
+$font-sizes-single: (
+    "16": 16px,
+    "10": 10px,
+    "12": 12px,
+    "14": 14px,
+    "18": 18px,
+    "20": 20px,
+    "24": 24px,
+    "32": 32px,
+    "60": 60px,
+    "36": 36px,
+    "72": 72px,
+);
+
+@each $key,
+$value in $font-sizes {
+    .text-#{$key} {
+        @include clamp(font-size, nth($value, 1), nth($value, 2), 1280, 480);
+    }
+}
+
+@each $key,
+$value in $font-sizes-single {
+    .text-#{$key} {
+        font-size: $value;
+    }
+}

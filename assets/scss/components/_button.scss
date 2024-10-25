@@ -1,0 +1,26 @@
+
+.tabs-section {
+    &.type-01 {
+        .inner-section {
+            .tabs {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+                min-width: 1220px;
+                .tab {
+                    counter: $mainColorBlueDark;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    font-family: "TanTheWhistling";
+                    font-weight: 700;
+                    text-underline-offset: 4px;
+                    &.active {
+                        color: $mainColorOrangeDark;
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}

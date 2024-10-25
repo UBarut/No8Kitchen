@@ -1,0 +1,179 @@
+// Clamp
+
+@mixin clamp($property,
+    $max-value,
+    $min-value,
+    $max-screen,
+    $min-screen) {
+    $viewportWidth : calc(($max-value - $min-value) / (($max-screen - $min-screen) / 100));
+    $calc-left: ($min-value - calc($viewportWidth * $min-screen / 100));
+    $calc: calc(#{$calc-left + px} + #{($viewportWidth + vw)});
+    #{$property}: clamp(#{$min-value + px}, #{$calc}, #{$max-value + px})
+}
+
+// Text Line Border
+
+@mixin text-line($line-count) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line-count;
+    -webkit-box-orient: vertical;
+}
+
+// Scroll Design
+
+@mixin scroll-design() {
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        // display: none;
+        background-color: #DEE3ED;
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #4983C3;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(90deg, #20B2E3 0%, #5476B9 100%);
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+}
+
+@mixin list-style {
+
+    ul,
+    ol {
+        padding-left: 16px;
+        display: flex;
+        flex-direction: column;
+        // @include clamp(gap, 12, 0, 1280, 680);
+        font-family: Inter;
+
+        li {
+            position: relative;
+            @include clamp(font-size, 15, 14, 1280, 680);
+            list-style: disc;
+
+            &::marker {
+                width: 8px;
+                height: 8px;
+                color: $mainColorBlueDark;
+                font-size: 20px;
+
+            }
+
+            a {
+                transition: all .6s ease;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    ol[start] {
+        li {
+            &::before {
+                content: none;
+            }
+        }
+    }
+
+    p,
+    h4 {
+        padding: 6px 0;
+        font-family: Inter;
+        @include clamp(font-size, 15, 14, 1280, 680);
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        font-weight: bold;
+    }
+}
+
+@mixin table-style {
+    table {
+        width: 100%;
+        @include clamp(margin-top, 60, 18, 1280, 680);
+        @include clamp(margin-bottom, 60, 18, 1280, 680);
+
+        color: #fff;
+
+        tr {
+            @include clamp(height, 60, 55, 1280, 680);
+            @include clamp(font-size, 15, 14, 1280, 680);
+            text-align: left;
+
+            &:first-child {
+                background-color: rgba(8, 190, 201, 0.25);
+            }
+
+            &:nth-child(2n+3) {
+                background-color: rgba(196, 196, 196, 0.05);
+            }
+
+            th {
+                font-weight: 700;
+                margin: auto;
+                @include clamp(padding-left, 28, 11, 1280, 680);
+            }
+
+            td {
+                font-weight: 400;
+                margin: auto;
+                @include clamp(padding-left, 28, 11, 1280, 680);
+            }
+        }
+    }
+}
+@mixin text-area {
+    @include list-style;
+    @include table-style;
+
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-size: 16px;
+        @include clamp(padding-top, 12, 4, 1280, 680);
+    }
+
+    h6,
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+}

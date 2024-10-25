@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/index.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/7493e98060.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section id="main-slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="https://placehold.co/1440x600/blue/000000/png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/1440x600/orange/FFFFFF/png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/1440x600/gray/FFFFFF/png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/1440x600/white/black/png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/1440x600/black/000000/png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/1440x600/cyan/000000/png" alt=""></div>
+                    <div class="swiper-slide"><img src="https://placehold.co/1440x600/yellow/000000/png" alt=""></div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="bottoPartAnim"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="inner-footer">
+            <div class="mediterranean-footer">
+                <div class="part">
+                    <ul>
+                        <li><a href="">Ekibimizle Tanışın</a></li>
+                        <li><a href="">MY Studio Online</a></li>
+                        <li><a href="">MY Studio Kayıt ve Abonelik</a></li>
+                        <li><a href="">Etkinlikler</a></li>
+                        <li><a href="">MY Uluslararası Yoga Uzmanlaşma Prg.</a></li>
+                        <li><a href="">MY Программы для инструкторов</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="part">
+                    <ul>
+                        <li class="icon"><a href=""><img src="/assets/img/icon/instagram2.svg" alt=""></a></li>
+                        <li class="icon"><a href=""><img src="/assets/img/icon/facebook.svg" alt=""></a></li>
+                        <li class="icon"><a href=""><img src="/assets/img/icon/pinterest.svg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="no08-footer">
+                <div class="part">
+                    <ul>
+                        <li><a href="">Menü</a></li>
+                        <li><a href="">Hakkımızda</a></li>
+                        <li><a href="">Etkinlikler</a></li>
+                        <li><a href="">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="part">
+                    <ul>
+                        <li class="icon"><a href=""><img src="/assets/img/icon/instagram2.svg" alt=""></a></li>
+                        <li class="icon"><a href=""><img src="/assets/img/icon/facebook.svg" alt=""></a></li>
+                        <li class="icon"><a href=""><img src="/assets/img/icon/pinterest.svg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <script src="/assets/js/Script.js"></script>
+    <script>
+        GetNavbar('kitchen-no8-header');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                // hide: true,
+                autoplay: {
+                    delay: 7000,
+                },
+                loop: true
+            },
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            freeMode: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

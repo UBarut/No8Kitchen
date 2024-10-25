@@ -1,0 +1,17 @@
+//Main Colors
+
+$white: white;
+$mainColorCyan: var(--mainColorCyan);
+$mainColorBlueDark: var(--mainColorBlueDark);
+$mainColorOrangeLight: var(--mainColorOrangeLight);
+$mainColorOrangeDark: var(--mainColorOrangeDark);
+
+//Bacground Colors
+$bg-001: #f7f7f7;
+
+:root {
+    --mainColorCyan: #d9edde;
+    --mainColorBlueDark: #0097b2;
+    --mainColorOrangeLight: #ffeecd;
+    --mainColorOrangeDark: #ffd194;
+}
