@@ -1284,43 +1284,95 @@ nav .nav-links .sub-links li.active a span {
 }
 footer {
   width: 100%;
+  background-color: var(--mainColorBlueDark);
 }
 footer .inner-footer {
   display: flex;
-  flex-direction: column;
-  background-color: var(--mainColorOrangeLight);
+  justify-content: space-between;
+  gap: 32px;
+  padding: 40px;
+  padding-left: clamp(20px, calc(-476.8px + 46vw), 112px);
+  padding-right: clamp(20px, calc(-476.8px + 46vw), 112px);
+  align-items: baseline;
 }
-footer .inner-footer > div {
-  padding: 40px 20px;
-  width: 100%;
-  flex: 1 1 50%;
-  padding: 20px;
+footer .inner-footer * {
+  color: white;
+}
+footer .inner-footer .left-part {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 32px;
+}
+footer .inner-footer .left-part .part {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: center;
+  gap: 12px;
+  max-width: 300px;
 }
-footer .inner-footer .part {
-  max-width: 1440px;
-  margin: 0 auto;
+footer .inner-footer .left-part .part .title {
+  font-size: 12px;
 }
-footer .inner-footer .part ul {
+footer .inner-footer .left-part .part .contact {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+footer .inner-footer .left-part .part .contact a {
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
 }
-footer .inner-footer .part ul li.icon {
-  width: 32px;
-  margin: auto;
+footer .inner-footer .left-part .part > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
 }
-footer .inner-footer .part ul li.icon a {
-  width: inherit;
+footer .inner-footer .right-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
-footer .inner-footer .part ul li.icon a img {
-  width: inherit;
+footer .inner-footer .right-part .qr-code {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--mainColorOrangeDark);
+}
+footer .inner-footer .right-part .qr-code img {
+  width: 80px;
+  height: 80px;
 }
 
+@media screen and (max-width: 768px) {
+  footer .inner-footer .left-part {
+    flex-direction: column;
+  }
+  footer .inner-footer .left-part .part {
+    max-width: 400px;
+  }
+  footer .inner-footer .left-part .part .title {
+    font-size: 20px;
+  }
+  footer .inner-footer .left-part .part > div * {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 540px) {
+  footer .inner-footer {
+    flex-direction: column;
+  }
+  footer .inner-footer .left-part .part {
+    max-width: unset;
+  }
+  footer .inner-footer .right-part {
+    width: 100%;
+    justify-content: center;
+  }
+}
 .swiper {
   width: 100%;
   height: calc(100dvh - 100px);

@@ -8,7 +8,16 @@ function GetNavbar(typeOfNavbar) {
             document.querySelector('header').appendChild(doc.getElementById(`${typeOfNavbar}`));
         });
 };
-
+function GetFooter() {
+    fetch('/components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(html, "text/html");
+            document.querySelector('footer').innerHTML = doc.body.innerHTML;
+        });
+};
+GetFooter();
 function TriggerController() {
     window.addEventListener('click', (e) => {
         if (e.target.closest('[data-trigger]:not(.active)')) {
