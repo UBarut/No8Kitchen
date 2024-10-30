@@ -425,7 +425,7 @@
             width: 100%;
             max-width: 100%;
             // min-height: 640px;
-            max-height: 600px;
+            max-height: 400px;
             aspect-ratio: 2/1;
             // border-radius: 4px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -437,7 +437,7 @@
 
             .top-part {
                 // aspect-ratio: 1/1;
-                flex: 1 1 50%;
+                flex: 1 1 40%;
 
                 .image {
                     width: 100%;
@@ -455,7 +455,7 @@
 
             .bottom-part {
                 padding: 12px 8px;
-                flex: 1 1 50%;
+                flex: 1 1 60%;
                 margin: auto 0;
 
                 // aspect-ratio: 3/4;
@@ -467,7 +467,10 @@
                     text-align: center;
 
                     .info {
-                        @include text-line(20);
+                        // @include text-line(20);
+                        overflow-y: scroll;
+                        @include scroll-design();
+                        height: 250px;
                     }
 
                     .social-medias {
@@ -507,10 +510,12 @@
 
                 .top-part {
                     aspect-ratio: 3/4;
+                    flex: 1 1 50%;
                 }
 
                 .bottom-part {
                     margin: unset;
+                    flex: 1 1 50%;
 
                     .content {
                         display: flex;

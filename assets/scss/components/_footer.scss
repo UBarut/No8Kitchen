@@ -1,7 +1,7 @@
-
 footer {
     width: 100%;
     background-color: $mainColorBlueDark;
+
     .inner-footer {
         display: flex;
         justify-content: space-between;
@@ -10,89 +10,127 @@ footer {
         @include clamp(padding-left, 112, 20, 1280, 1080);
         @include clamp(padding-right, 112, 20, 1280, 1080);
         align-items: baseline;
-        *{
+
+        * {
             color: $white;
         }
-      .left-part {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        gap: 32px;
-        .part {
+
+        .left-part {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-width: 300px;
-            .title {
-                font-size: 12px;
-            }
-            .contact {
+            justify-content: flex-start;
+            align-items: baseline;
+            gap: 32px;
+
+            .part {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
                 gap: 12px;
-                a {
+                max-width: 300px;
+
+                .title {
+                    font-size: 12px;
+                }
+
+                .contact {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 12px;
+
+                    a {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 12px;
+                    }
+                }
+
+                &>div {
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     gap: 12px;
                 }
             }
-            &> div {
+        }
+
+        .right-part {
+
+            .parts {
                 display: flex;
-                justify-content: flex-start;
+                justify-content: space-between;
                 align-items: center;
-                gap: 12px;
+                gap: 16px;
+
+                .part {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+
+                    .qr-code {
+                        padding: 12px;
+                        border-radius: 8px;
+                        background-color: $mainColorOrangeDark;
+
+                        img {
+                            width: 80px;
+                            height: 80px;
+                        }
+                    }
+                }
             }
         }
-      }
-      .right-part {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        .qr-code {
-            padding: 12px;
-            border-radius: 8px;
-            background-color: $mainColorOrangeDark;
-            img {
-                width: 80px;
-                height: 80px;
-            }
-        }
-      }
     }
 }
+
 @media screen and (max-width: 768px) {
     footer {
         .inner-footer {
             .left-part {
                 flex-direction: column;
+
                 .part {
                     max-width: 400px;
+
                     .title {
                         font-size: 20px;
                     }
-                    &> div *{
+
+                    &>div * {
                         font-size: 14px;
                     }
+                }
+            }
+
+            .right-part {
+                .parts {
+                    flex-direction: column;
                 }
             }
         }
     }
 }
+
 @media screen and (max-width: 540px) {
     footer {
         .inner-footer {
             flex-direction: column;
+
             .left-part {
                 .part {
                     max-width: unset;
                 }
             }
+
             .right-part {
                 width: 100%;
                 justify-content: center;
+                .parts {
+                    flex-direction: unset;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
             }
         }
     }
