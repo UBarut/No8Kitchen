@@ -119,68 +119,106 @@
                 <img src="/assets/img/dummy/login-01.jpg" alt="Kayıt Ol">
             </div>
             <div class="right-part">
-                <form class="form active">
+                <form class="form">
                     <div class="content">
-						<h2 class="title text-24">Kayıt Olun</h2>
-						<!-- <div class="comment"></div> -->
-					</div>
-					<div class="outer-input half-input">
-						<div class="inner-input">
-							<input type="text" class="" id="name" name="name" min="2" max="20" befill>
-							<label for="name" class="i-placeholder">Ad</label>
-						</div>
-						<h5 class="input-error"></h5>
-					</div>
+                        <h2 class="title text-24">Kayıt Olun</h2>
+                        <!-- <div class="comment"></div> -->
+                    </div>
                     <div class="outer-input half-input">
-						<div class="inner-input">
-							<input type="text" class="" id="surname" name="surname" min="2" max="20" befill>
-							<label for="surname" class="i-placeholder">Soyad</label>
-						</div>
-						<h5 class="input-error"></h5>
-					</div>
+                        <div class="inner-input">
+                            <input type="text" class="" id="name" name="name" min="2" max="20" befill>
+                            <label for="name" class="i-placeholder">Ad</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
+                    <div class="outer-input half-input">
+                        <div class="inner-input">
+                            <input type="text" class="" id="surname" name="surname" min="2" max="20" befill>
+                            <label for="surname" class="i-placeholder">Soyad</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
                     <div class="outer-input">
-						<div class="inner-input">
-							<input type="email" class="" id="mail" name="mail" befill>
-							<label for="mail" class="i-placeholder">E-Posta</label>
-						</div>
-						<h5 class="input-error"></h5>
-					</div>
+                        <div class="inner-input">
+                            <input type="email" class="" id="mail" name="mail" befill>
+                            <label for="mail" class="i-placeholder">E-Posta</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
                     <div class="outer-input">
-						<div class="inner-input">
-							<input type="text" class="" id="password" name="password" befill>
-							<label for="password" class="i-placeholder">Şifre</label>
-						</div>
-						<h5 class="input-error"></h5>
-					</div>
+                        <div class="inner-input">
+                            <input type="text" class="" id="password" name="password" befill>
+                            <label for="password" class="i-placeholder">Şifre</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
                     <div class="buttons">
                         <button class="button btn-form btn-submit" disabled><span>Kayıt Ol</span></button>
                         <a type="button" class="button btn-change-next-form"><span>Zaten Üyeyim</span></a>
-					</div>
+                    </div>
                 </form>
                 <form class="form">
                     <div class="content">
-						<h2 class="title text-24">Giris Yap</h2>
-						<!-- <div class="comment"></div> -->
-					</div>
+                        <h2 class="title text-24">Giris Yap</h2>
+                        <!-- <div class="comment"></div> -->
+                    </div>
                     <div class="outer-input">
-						<div class="inner-input">
-							<input type="email" class="" id="mail" name="mail" befill>
-							<label for="mail" class="i-placeholder">E-Posta</label>
-						</div>
-						<h5 class="input-error"></h5>
-					</div>
+                        <div class="inner-input">
+                            <input type="email" class="" id="mail" name="mail" befill>
+                            <label for="mail" class="i-placeholder">E-Posta</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
                     <div class="outer-input">
-						<div class="inner-input">
-							<input type="text" class="" id="password" name="password" befill>
-							<label for="password" class="i-placeholder">Şifre</label>
-						</div>
-						<h5 class="input-error"></h5>
-					</div>
+                        <div class="inner-input">
+                            <input type="text" class="" id="password" name="password" befill>
+                            <label for="password" class="i-placeholder">Şifre</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
                     <div class="buttons">
                         <button class="button btn-form btn-submit" disabled><span>Giris Yap</span></button>
                         <a type="button" class="button btn-change-prev-form"><span>Kayıt Olun</span></a>
-					</div>
+                    </div>
                 </form>
+                <form class="form">
+                    <div class="content">
+                        <h2 class="title text-24">Mail Dogrulama</h2>
+                        <div class="comment">Sifrenizi yenilemek icin mail adresinizi giriniz.</div>
+                    </div>
+                    <div class="outer-input">
+                        <div class="inner-input">
+                            <input type="email" class="" id="mail" name="mail" befill>
+                            <label for="mail" class="i-placeholder">E-Posta</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
+                    <div class="buttons">
+                        <button class="button btn-form btn-submit" disabled><span>Aktivasyon Kodu Gonder</span></button>
+                    </div>
+                </form>
+                <form class="form active">
+                    <div class="content">
+                        <h2 class="title text-24">Sifre Yenileme</h2>
+                        <!-- <div class="comment"></div> -->
+                    </div>
+                    <div class="outer-input">
+                        <div class="inner-input">
+                            <input type="text" class="" id="password" name="password" befill>
+                            <label for="password" class="i-placeholder">Şifre</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
+                    <div class="outer-input">
+                        <div class="inner-input">
+                            <input type="text" class="" id="password" name="password" befill>
+                            <label for="password" class="i-placeholder">Şifre Tekrarla</label>
+                        </div>
+                        <h5 class="input-error"></h5>
+                    </div>
+                    <div class="buttons">
+                        <button class="button btn-form btn-submit" disabled><span>Sifre Yenile</span></button>
+                    </div>
                 </form>
             </div>
             <i class="fa-solid fa-close darkblue fs-32 close" data-modal-trigger="login-popup"></i>

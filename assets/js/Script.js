@@ -44,7 +44,7 @@ function TriggerController() {
 TriggerController();
 function ModalTriggerController() {
     window.addEventListener('click', (e) => {
-        if(e.target.closest('[data-modal-trigger]')) {
+        if (e.target.closest('[data-modal-trigger]')) {
             let triggerButton = e.target.closest('[data-modal-trigger]');
             let modal = document.querySelector(`#${triggerButton.dataset.modalTrigger}`);
             modal.classList.toggle('active');
@@ -67,13 +67,13 @@ function HamburgerMenuController() {
 HamburgerMenuController();
 function ChangeFormContainer() {
     window.addEventListener('click', (e) => {
-        if(e.target.closest('.btn-change-next-form')) {
+        if (e.target.closest('.btn-change-next-form')) {
             const btnChangeForm = e.target.closest('.btn-change-next-form');
             const activeForm = btnChangeForm.closest('form');
             const otherForm = activeForm.nextElementSibling;
             activeForm.classList.remove('active');
             otherForm.classList.add('active');
-        } else if(e.target.closest('.btn-change-prev-form')) {
+        } else if (e.target.closest('.btn-change-prev-form')) {
             const btnChangeForm = e.target.closest('.btn-change-prev-form');
             const activeForm = btnChangeForm.closest('form');
             const otherForm = activeForm.previousElementSibling;
@@ -83,3 +83,29 @@ function ChangeFormContainer() {
     });
 };
 ChangeFormContainer();
+function InputPlaceHolderController() {
+    document.querySelectorAll('form').forEach(form => {
+        form.addEventListener('blur', (e) => {
+            try {
+                let target = e.target.matches("input");
+                if (target && e.target.closest('.inner-input').querySelector('label.i-placeholder')) {
+                    e.target.value == ''
+                        ? e.target.closest('.outer-input').classList.remove('not-empty')
+                        : e.target.closest('.outer-input').classList.add('not-empty')
+                }
+            } catch (e) {
+
+            }
+        }, true);
+    })
+    window.addEventListener('focus', (e) => {
+        try {
+            e.target.closest('.outer-input').classList.add('not-empty')
+        } catch (e) {
+
+        }
+    }, true);
+};
+setTimeout(() => {
+    InputPlaceHolderController();
+}, 1000);

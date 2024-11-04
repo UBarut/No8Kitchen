@@ -51,6 +51,14 @@ footer {
                     align-items: center;
                     gap: 12px;
                 }
+                .social-medias {
+                    a {
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
             }
         }
 

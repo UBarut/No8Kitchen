@@ -457,12 +457,18 @@
 
 .px-12020 {
     @include clamp(padding-left, 120, 20, 1280, 680);
-    @include clamp(padding-right, 120, 20, 1280, 680)
+    @include clamp(padding-right, 120, 20, 1280, 680);
 }
 
 .py-6020 {
     @include clamp(padding-top, 60, 20, 1280, 680);
-    @include clamp(padding-bottom, 60, 20, 1280, 680)
+    @include clamp(padding-bottom, 60, 20, 1280, 680);
+}
+.pt-6020 {
+    @include clamp(padding-top, 60, 20, 1280, 680);
+}
+.pb-6020 {
+    @include clamp(padding-bottom, 60, 20, 1280, 680);
 }
 
 // .py-main {@include clamp(padding-top, 32, 20, 1280, 680); @include clamp(padding-bottom, 60, 40, 1280, 680)} 

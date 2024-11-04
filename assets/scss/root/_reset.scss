@@ -29,7 +29,7 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 16px;
-    // color: $main-color;
+    color: $fontColor;
     box-sizing: border-box;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
@@ -49,6 +49,9 @@ body{
     display: flex;
     flex-direction: column;
     overflow-x: clip;
+}
+main {
+    min-height: calc(100dvh - 327px);
 }
 button{
     outline: none;
