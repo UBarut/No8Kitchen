@@ -2473,7 +2473,7 @@ html:has(.popup.active) {
   text-align: center;
 }
 .card.type-02-v2 .bottom-part .content .info {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 250px;
 }
 .card.type-02-v2 .bottom-part .content .info::-webkit-scrollbar {

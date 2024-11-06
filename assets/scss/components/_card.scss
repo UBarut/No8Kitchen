@@ -481,7 +481,7 @@
 
                     .info {
                         // @include text-line(20);
-                        overflow-y: scroll;
+                        overflow-y: auto;
                         @include scroll-design();
                         height: 250px;
                     }
