@@ -20,27 +20,7 @@ header {
             }
         }
     }
-
-    // &.no8kitchen {
-    //     --mainColorCyan: #ffeecd;
-    //     --mainColorBlueDark: #ffd194;
-    //     --mainColorOrangeLight: #d9edde;
-    //     --mainColorOrangeDark: #0097b2;
-    // }
 }
-
-
-// transition: background-image .4s linear;
-// background-color: $no08-main-color-01;
-// background-image: linear-gradient(90deg, $no08-main-color-01 0%, $no08-main-color-02 100%);
-
-// &:has(nav .bottom-nav ul li:first-child a:hover) {
-//     background-image: linear-gradient(90deg, $no08-main-color-01 50%, $no08-main-color-02 100%);
-// }
-
-// &:has(nav .bottom-nav ul li:last-child a:hover) {
-//     background-image: linear-gradient(90deg, $no08-main-color-01 0%, $no08-main-color-02 50%);
-// }
 
 nav {
     display: flex;
@@ -120,6 +100,7 @@ nav {
         }
 
         .middle {
+
             // margin-left: -200px;
             a {
                 height: 30px;
@@ -318,9 +299,11 @@ nav {
     nav {
         .top-nav {
             height: 40px;
+
             .middle {
                 display: none;
             }
+
             .right {
                 .hamburger-menu {
                     display: block;
@@ -330,12 +313,14 @@ nav {
 
         .bottom-nav {
             height: 60px;
+
             ul {
                 li {
                     a {
                         span {
                             font-size: 16px;
                         }
+
                         img {
                             height: 50px;
                         }
@@ -383,14 +368,18 @@ nav {
 
         .bottom-nav {
             height: 60px;
+
             ul {
                 gap: 8px;
+
                 li {
                     a {
                         gap: 8px;
+
                         span {
                             font-size: 10px;
                         }
+
                         img {
                             height: 40px;
                         }

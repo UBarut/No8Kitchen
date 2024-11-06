@@ -2,12 +2,16 @@
 .tabs-section {
     &.type-01 {
         .inner-section {
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
             .tabs {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 gap: 20px;
-                min-width: 1220px;
+                // min-width: 1220px;
                 .tab {
                     counter: $mainColorBlueDark;
                     text-decoration: underline;
@@ -15,9 +19,23 @@
                     font-family: "TanTheWhistling";
                     font-weight: 700;
                     text-underline-offset: 4px;
+                    white-space: nowrap;
                     &.active {
                         color: $mainColorOrangeDark;
                         pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .tabs-section {
+        &.type-01 {
+            .inner-section {
+                .tabs {
+                    .tab {
+                        font-size: 16px;
                     }
                 }
             }

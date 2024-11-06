@@ -106,6 +106,86 @@ function InputPlaceHolderController() {
         }
     }, true);
 };
-setTimeout(() => {
-    InputPlaceHolderController();
-}, 1000);
+InputPlaceHolderController();
+
+function IntersectionCardEffect() {
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('effect');
+            } else {
+                entry.target.classList.remove('effect');
+            }
+        });
+    }, {
+        threshold: 0.5,
+    });
+    cards.forEach((card) => {
+        observer.observe(card);
+    });
+};
+IntersectionCardEffect();
+function BottoPartAnim() {
+    if (document.querySelector('#main-slider .bottoPartAnim')) {
+        window.addEventListener('scroll', function () {
+            const scrollDiv = document.querySelector('#main-slider .bottoPartAnim');
+            const scrollPosition = window.scrollY;
+            let viewWidthTwentyPercent = window.innerWidth / 100 * 10;
+
+            // Scroll pozisyonu 100px'den küçükse
+            if (scrollPosition < viewWidthTwentyPercent) {
+                // Scroll'a bağlı olarak yukarıya kaydır
+                scrollDiv.style.transform = `translate(-50%, calc(50% - ${scrollPosition}px))`;
+            } else {
+                // Scroll 100px'in üzerindeyse, div 100px yukarı kaymış olsun
+                scrollDiv.style.transform = `translate(-50%, 0)`;
+            }
+        });
+    };
+};
+BottoPartAnim();
+
+var swiperType01 = new Swiper(".type-01", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 7000,
+        // loop: true
+    },
+});
+var swiperType02 = new Swiper(".type-02", {
+    // slidesPerView: 4,
+    spaceBetween: 30,
+    freeMode: true,
+    autoplay: {
+        delay: 5000,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    slidesPerView: 1,
+    breakpoints: {
+        540: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        }
+    }
+});

@@ -770,12 +770,17 @@ a:hover .fa-brands.darkorange {
   color: var(--mainColorBlueDark);
 }
 
+.tabs-section.type-01 .inner-section {
+  overflow-x: auto;
+}
+.tabs-section.type-01 .inner-section::-webkit-scrollbar {
+  display: none;
+}
 .tabs-section.type-01 .inner-section .tabs {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  min-width: 1220px;
 }
 .tabs-section.type-01 .inner-section .tabs .tab {
   counter: var(--mainColorBlueDark);
@@ -784,12 +789,18 @@ a:hover .fa-brands.darkorange {
   font-family: "TanTheWhistling";
   font-weight: 700;
   text-underline-offset: 4px;
+  white-space: nowrap;
 }
 .tabs-section.type-01 .inner-section .tabs .tab.active {
   color: var(--mainColorOrangeDark);
   pointer-events: none;
 }
 
+@media screen and (max-width: 768px) {
+  .tabs-section.type-01 .inner-section .tabs .tab {
+    font-size: 16px;
+  }
+}
 .outer-input {
   display: flex;
   flex-direction: column;
@@ -1428,25 +1439,59 @@ footer .inner-footer .right-part .parts .part .qr-code img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.swiper .swiper-wrapper .swiper-slide picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.swiper.type-01 .swiper-button-next,
+.swiper.type-01 .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--mainColorBlueDark);
+}
+.swiper.type-01 .swiper-button-next:after,
+.swiper.type-01 .swiper-button-prev:after {
+  font-size: 16px;
+  color: white;
+}
 
+@media screen and (max-width: 768px) {
+  .swiper.type-01 .swiper-button-next,
+  .swiper.type-01 .swiper-button-prev {
+    display: none;
+  }
+}
 #main-slider {
   position: relative;
   overflow: hidden;
 }
 #main-slider .bottoPartAnim {
-  content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
   height: 20dvw;
   width: 100%;
-  background-color: #f7f7f7;
+  background-image: url(/assets/img/sliderAnimeImage02.svg);
+  background-size: 100% 100%;
   z-index: 10;
-  -webkit-clip-path: polygon(0% 39%, 3% 35%, 6% 32%, 9% 29%, 10% 28%, 13% 25%, 15% 23%, 17% 22%, 20% 20%, 22% 20%, 25% 19%, 28% 18%, 30% 18%, 34% 19%, 37% 20%, 41% 22%, 45% 26%, 50% 29%, 52% 30%, 55% 30%, 60% 31%, 62% 30%, 65% 30%, 68% 28%, 70% 27%, 72% 26%, 74% 24%, 78% 22%, 81% 20%, 84% 17%, 88% 14%, 90% 13%, 92% 9%, 96% 7%, 99% 5%, 100% 2%, 100% 100%, 0% 100%);
-          clip-path: polygon(0% 39%, 3% 35%, 6% 32%, 9% 29%, 10% 28%, 13% 25%, 15% 23%, 17% 22%, 20% 20%, 22% 20%, 25% 19%, 28% 18%, 30% 18%, 34% 19%, 37% 20%, 41% 22%, 45% 26%, 50% 29%, 52% 30%, 55% 30%, 60% 31%, 62% 30%, 65% 30%, 68% 28%, 70% 27%, 72% 26%, 74% 24%, 78% 22%, 81% 20%, 84% 17%, 88% 14%, 90% 13%, 92% 9%, 96% 7%, 99% 5%, 100% 2%, 100% 100%, 0% 100%);
 }
 
+@media screen and (max-width: 1080px) {
+  #main-slider .swiper {
+    height: 41.6666666667dvw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #main-slider .swiper {
+    height: 100dvw;
+  }
+  #main-slider .bottoPartAnim {
+    display: none;
+  }
+}
 #certificates .inner-section {
   max-width: 1440px;
   height: 300px;
@@ -1454,6 +1499,23 @@ footer .inner-footer .right-part .parts .part .qr-code img {
   margin: 0 auto;
   padding: 40px 20px;
   display: flex;
+}
+#certificates .inner-section .swiper-wrapper .swiper-slide img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.card:not(.effect) {
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.card.effect {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
 }
 
 #page-detail .inner-section {
@@ -1534,8 +1596,8 @@ footer .inner-footer .right-part .parts .part .qr-code img {
   height: auto;
   width: 100%;
   margin: 0 auto;
-  padding-right: clamp(0px, 256px - 20vw, 20px);
-  padding-left: clamp(0px, 256px - 20vw, 20px);
+  padding-left: clamp(0px, calc(80px + -5.5555555556vw), 20px);
+  padding-right: clamp(0px, calc(80px + -5.5555555556vw), 20px);
   display: flex;
 }
 #about .inner-section .left-part {
@@ -1563,6 +1625,20 @@ footer .inner-footer .right-part .parts .part .qr-code img {
      object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+  #about .inner-section {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+  #about .inner-section .left-part, #about .inner-section .right-part {
+    flex: unset;
+    width: 100%;
+  }
+  #about .inner-section .right-part {
+    aspect-ratio: 1/1;
+    height: unset;
+  }
+}
 .card-list .inner-section {
   display: flex;
   justify-content: flex-start;
@@ -1733,6 +1809,10 @@ footer .inner-footer .right-part .parts .part .qr-code img {
   .detail-content .inner-section .info {
     flex-direction: column;
     align-items: flex-end;
+    gap: 16px;
+  }
+  .detail-content .inner-section .info .left-part {
+    margin-right: auto;
   }
 }
 html:has(.popup.active) {
@@ -1872,6 +1952,7 @@ html:has(.popup.active) {
   margin: 0 auto;
   font-size: 100px;
   margin: 0 auto;
+  rotate: 4deg;
 }
 .menu-top-side .inner-section .curved-title .curved-text span {
   min-width: 0.5em;
@@ -1887,6 +1968,11 @@ html:has(.popup.active) {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  .menu-top-side .inner-section .curved-title {
+    margin-bottom: -160px;
+  }
+}
 .menu-list-01 .inner-section {
   position: relative;
   display: flex;

@@ -1,3 +1,16 @@
+.card {
+    &:not(.effect) {
+        opacity: 0.5;
+        transform: scale(0.8);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    &.effect {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 @mixin Type-01-v1 {
     .card {
 
