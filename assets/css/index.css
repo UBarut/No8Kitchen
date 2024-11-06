@@ -2640,7 +2640,15 @@ html:has(.popup.active) {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(45deg, rgba(255, 209, 148, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(135deg, rgba(255, 209, 148, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.card.type-04.passive .badge {
+  transform: translate(0, -50%);
+  background-color: #3C3C3C;
+}
+.card.type-04.passive .badge i,
+.card.type-04.passive .badge span {
+  color: white;
 }
 .card.type-04 .image {
   width: 100%;
@@ -2667,19 +2675,17 @@ html:has(.popup.active) {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  color: white;
   transition: all 0.5s linear;
 }
-.card.type-04:hover .badge {
-  transform: translate(0, -50%);
-}
-.card.type-04:hover.passive .badge {
-  background-color: #3C3C3C;
-}
-.card.type-04:hover.passive .badge i {
+.card.type-04 .badge span {
   color: white;
 }
 
+@media screen and (min-width: 981px) {
+  .card.type-04:not(.passive):hover .badge {
+    transform: translate(0, -50%);
+  }
+}
 @media screen and (max-width: 980px) {
   .card.type-04 {
     max-width: 100%;
@@ -2688,6 +2694,7 @@ html:has(.popup.active) {
   .card.type-04 .badge {
     top: 100%;
     left: 50%;
+    transform: translate(-50%, -50%) !important;
   }
 }
 @media screen and (max-width: 480px) {
