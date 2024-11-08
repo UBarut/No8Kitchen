@@ -1028,6 +1028,7 @@
         &.type-06 {
             --card-minWidth: 400px;
             display: flex;
+            justify-content: space-between;
             gap: 32px;
             background-color: $white;
             // border-radius: 0 20px 20px 0;
@@ -1038,7 +1039,7 @@
 
             .left-part {
                 padding-left: 100px;
-                margin-left: -180px;
+                margin-left: -160px;
 
                 .image {
                     width: 180px;
@@ -1081,7 +1082,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 12px;
+                    padding: 6px;
                     border-radius: 50%;
                     background-color: $mainColorOrangeDark;
                     aspect-ratio: 1;
@@ -1090,7 +1091,7 @@
                     // min-width: 100px;
                     span {
                         font-family: "TanTheWhistling";
-                        font-size: 28px;
+                        font-size: 18px;
                         font-weight: 600;
                         color: $white;
                     }
@@ -1115,7 +1116,7 @@
                         padding-left: unset;
                         margin-left: unset;
                         padding-right: 100px;
-                        margin-right: -180px;
+                        margin-right: -160px;
 
                     }
 

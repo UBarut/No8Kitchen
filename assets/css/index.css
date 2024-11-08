@@ -2847,6 +2847,7 @@ html:has(.popup.active) {
 .card.type-06 {
   --card-minWidth: 400px;
   display: flex;
+  justify-content: space-between;
   gap: 32px;
   background-color: white;
   border-radius: 20px;
@@ -2856,7 +2857,7 @@ html:has(.popup.active) {
 }
 .card.type-06 .left-part {
   padding-left: 100px;
-  margin-left: -180px;
+  margin-left: -160px;
 }
 .card.type-06 .left-part .image {
   width: 180px;
@@ -2897,7 +2898,7 @@ html:has(.popup.active) {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 6px;
   border-radius: 50%;
   background-color: var(--mainColorOrangeDark);
   aspect-ratio: 1;
@@ -2905,7 +2906,7 @@ html:has(.popup.active) {
 }
 .card.type-06 .right-part .price span {
   font-family: "TanTheWhistling";
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 600;
   color: white;
 }
@@ -2925,7 +2926,7 @@ html:has(.popup.active) {
     padding-left: unset;
     margin-left: unset;
     padding-right: 100px;
-    margin-right: -180px;
+    margin-right: -160px;
   }
   .card.type-06:nth-child(2n) .right-part .price {
     right: unset;
