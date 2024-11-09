@@ -439,7 +439,7 @@
             max-width: 100%;
             // min-height: 640px;
             max-height: 400px;
-            aspect-ratio: 2/1;
+            // aspect-ratio: 2/1;
             // border-radius: 4px;
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             background-color: $white;
@@ -1006,6 +1006,7 @@
                 padding: 60px 4px;
                 z-index: -1;
                 transition: all .4s linear;
+                border-radius: 0 0 50px 50px;
 
                 h3 {
                     font-size: 24px;
@@ -1017,6 +1018,7 @@
                 .content {
                     top: 0px;
                     height: 70%;
+                    border-radius: unset;
                 }
             }
         }

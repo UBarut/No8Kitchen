@@ -353,6 +353,37 @@ nav {
                 }
             }
         }
+
+        &#kitchen-no8-header {
+            .top-nav {
+                .right {
+                    .hamburger-menu {
+                        display: none!important;
+                    }
+                }
+            }
+            .nav-links {
+                // position: relative;
+                .logo:first-child {
+                    position: absolute;
+                    top: 0;
+                    left: 20px;
+                    transform: translateY(50%);
+                }
+                .sub-links {
+                    display: flex!important;
+                    position: static!important;
+                    width: unset!important;
+                    height: unset!important;
+                    background-color: unset!important;
+                    padding: unset!important;
+                    margin: unset!important;
+                    li.mobile {
+                        display: none!important;
+                    }
+                }
+            }
+        }
     }
 }
 

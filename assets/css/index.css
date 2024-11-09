@@ -1259,6 +1259,27 @@ nav .nav-links .sub-links li.active a span {
   nav .nav-links .sub-links.active {
     display: flex;
   }
+  nav#kitchen-no8-header .top-nav .right .hamburger-menu {
+    display: none !important;
+  }
+  nav#kitchen-no8-header .nav-links .logo:first-child {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateY(50%);
+  }
+  nav#kitchen-no8-header .nav-links .sub-links {
+    display: flex !important;
+    position: static !important;
+    width: unset !important;
+    height: unset !important;
+    background-color: unset !important;
+    padding: unset !important;
+    margin: unset !important;
+  }
+  nav#kitchen-no8-header .nav-links .sub-links li.mobile {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 540px) {
   nav .top-nav {
@@ -1599,10 +1620,12 @@ footer .inner-footer .right-part .parts .part .qr-code img {
   padding-left: clamp(0px, calc(80px + -5.5555555556vw), 20px);
   padding-right: clamp(0px, calc(80px + -5.5555555556vw), 20px);
   display: flex;
+  gap: 32px;
 }
 #about .inner-section .left-part {
   flex: 1 1 50%;
   width: 50%;
+  margin: auto 0;
 }
 #about .inner-section .left-part .content {
   display: flex;
@@ -1610,12 +1633,16 @@ footer .inner-footer .right-part .parts .part .qr-code img {
   gap: 12px;
 }
 #about .inner-section .left-part .content h2 {
-  font-size: 20px;
+  font-size: 32px;
   font-weight: 700;
+}
+#about .inner-section .left-part .content p {
+  text-align: justify;
 }
 #about .inner-section .right-part {
   flex: 1 1 50%;
-  height: 30dvw;
+  height: 100%;
+  max-height: 30dvw;
   width: 50%;
 }
 #about .inner-section .right-part img {
@@ -1637,6 +1664,7 @@ footer .inner-footer .right-part .parts .part .qr-code img {
   #about .inner-section .right-part {
     aspect-ratio: 1/1;
     height: unset;
+    max-height: unset;
   }
 }
 .card-list .inner-section {
@@ -2012,7 +2040,6 @@ html:has(.popup.active) {
 }
 .menu-list-01 .inner-section .parts .part:first-child .comment {
   margin-left: 12px;
-  font-family: "TanTheWhistling";
   font-size: 13px;
   font-weight: 300;
   font-style: italic;
@@ -2044,11 +2071,12 @@ html:has(.popup.active) {
 
 @media screen and (max-width: 768px) {
   .menu-list-01 {
-    padding: 20px 16px;
+    padding: 20px 32px;
   }
   .menu-list-01 .inner-section {
     border: 6px solid var(--mainColorCyan);
     padding: 16px 12px;
+    gap: 16px;
   }
   .menu-list-01 .inner-section::before {
     background-size: contain;
@@ -2058,17 +2086,17 @@ html:has(.popup.active) {
     margin: 0 10%;
   }
   .menu-list-01 .inner-section .parts .part:first-child .name {
-    font-size: 14px;
+    font-size: 16px;
   }
   .menu-list-01 .inner-section .parts .part:first-child .comment {
-    font-size: 10px;
+    font-size: 11px;
     margin-left: 4px;
   }
   .menu-list-01 .inner-section .parts .part:last-child .name {
     font-size: 12px;
   }
   .menu-list-01 .inner-section .parts .part:last-child .comment {
-    font-size: 10px;
+    font-size: 11px;
   }
   .menu-list-01 .inner-section .parts.title .part .name {
     font-size: 16px;
@@ -2438,7 +2466,6 @@ html:has(.popup.active) {
   width: 100%;
   max-width: 100%;
   max-height: 400px;
-  aspect-ratio: 2/1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   background-color: white;
 }
@@ -2834,6 +2861,7 @@ html:has(.popup.active) {
   padding: 60px 4px;
   z-index: -1;
   transition: all 0.4s linear;
+  border-radius: 0 0 50px 50px;
 }
 .card.type-05 .content h3 {
   font-size: 24px;
@@ -2842,6 +2870,7 @@ html:has(.popup.active) {
 .card.type-05:hover .content {
   top: 0px;
   height: 70%;
+  border-radius: unset;
 }
 
 .card.type-06 {
