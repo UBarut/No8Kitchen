@@ -180,7 +180,8 @@
                         font-size: 32px;
                         font-weight: 700;
                     }
-                    p{
+
+                    p {
                         text-align: justify;
                     }
                 }
@@ -200,15 +201,19 @@
             }
         }
     }
-    @media screen and (max-width: 768px){
-        #about {    
+
+    @media screen and (max-width: 768px) {
+        #about {
             .inner-section {
                 flex-direction: column-reverse;
                 gap: 32px;
-                .left-part, .right-part {
+
+                .left-part,
+                .right-part {
                     flex: unset;
                     width: 100%;
                 }
+
                 .right-part {
                     aspect-ratio: 1/1;
                     height: unset;
@@ -278,6 +283,7 @@
                     flex-direction: column;
                     align-items: flex-end;
                     gap: 16px;
+
                     .left-part {
                         margin-right: auto;
                     }
@@ -354,6 +360,22 @@
                 }
             }
 
+            .menu-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-height: 120px;
+                height: 100%;
+                width: 100%;
+
+                img {
+                    height: inherit;
+                    width: inherit;
+                    object-fit: contain;
+                    max-height: inherit;
+                }
+            }
+
             .title {
                 font-size: 24px;
                 width: 100%;
@@ -361,14 +383,15 @@
             }
         }
     }
-    @media screen and (max-width: 768px){
+
+    @media screen and (max-width: 768px) {
         .menu-top-side {
             .inner-section {
                 .curved-title {
                     margin-bottom: -160px;
                 }
             }
-        } 
+        }
     }
 }
 
@@ -508,6 +531,7 @@
                             }
                         }
                     }
+
                     &.title {
                         .part {
                             .name {
@@ -555,7 +579,6 @@
                 justify-content: space-between;
                 align-items: baseline;
                 gap: 32px;
-                // padding-left: 33%;
 
                 .part {
                     display: flex;
@@ -563,14 +586,6 @@
                     gap: 2px;
 
                     &:first-child {
-
-                        // &::before {
-                        //     content: '';
-                        //     display: inline-flex;
-                        //     height: 2px;
-                        //     width: 100%;
-                        //     background-color: black;
-                        // }
 
                         .name {
                             font-family: "TanTheWhistling";
@@ -581,7 +596,7 @@
 
                         .comment {
                             margin-left: 12px;
-                            font-family: "TanTheWhistling";
+                            // font-family: "TanTheWhistling";
                             font-size: 13px;
                             font-weight: 300;
                             font-style: italic;
@@ -614,7 +629,6 @@
 
                 &.title {
                     margin: 20px 0;
-                    border-bottom: 1px solid $mainColorBlueDark;
 
                     .part {
                         .name {
@@ -632,7 +646,7 @@
 
     @media screen and (max-width: 768px) {
         .menu-list-02 {
-            padding: 20px 16px;
+            padding: 20px 32px;
 
             .inner-section {
                 padding: 16px 12px;
@@ -658,11 +672,11 @@
                         &:first-child {
 
                             .name {
-                                font-size: 14px;
+                                font-size: 16px;
                             }
 
                             .comment {
-                                font-size: 10px;
+                                font-size: 11px;
                                 margin-left: 4px;
                             }
                         }
@@ -674,10 +688,11 @@
                             }
 
                             .comment {
-                                font-size: 10px;
+                                font-size: 11px;
                             }
                         }
                     }
+
                     &.title {
                         .part {
                             .name {
@@ -691,6 +706,7 @@
         }
     }
 }
+
 @mixin Menu-List-03 {
     .menu-list-03 {
         .inner-section {

@@ -1259,12 +1259,22 @@ nav .nav-links .sub-links li.active a span {
   nav .nav-links .sub-links.active {
     display: flex;
   }
+  nav#kitchen-no8-header .top-nav .left {
+    display: none;
+  }
+  nav#kitchen-no8-header .top-nav .middle {
+    display: block !important;
+    margin-left: auto !important;
+  }
+  nav#kitchen-no8-header .top-nav .middle .logo span {
+    font-size: 16px;
+  }
   nav#kitchen-no8-header .top-nav .right .hamburger-menu {
     display: none !important;
   }
   nav#kitchen-no8-header .nav-links .logo:first-child {
     position: absolute;
-    top: 0;
+    top: -8px;
     left: 20px;
     transform: translateY(50%);
   }
@@ -1657,7 +1667,8 @@ footer .inner-footer .right-part .parts .part .qr-code img {
     flex-direction: column-reverse;
     gap: 32px;
   }
-  #about .inner-section .left-part, #about .inner-section .right-part {
+  #about .inner-section .left-part,
+  #about .inner-section .right-part {
     flex: unset;
     width: 100%;
   }
@@ -1990,6 +2001,21 @@ html:has(.popup.active) {
   font-size: 32px;
   font-family: "TanTheWhistling";
 }
+.menu-top-side .inner-section .menu-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 120px;
+  height: 100%;
+  width: 100%;
+}
+.menu-top-side .inner-section .menu-title img {
+  height: inherit;
+  width: inherit;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: inherit;
+}
 .menu-top-side .inner-section .title {
   font-size: 24px;
   width: 100%;
@@ -2144,7 +2170,6 @@ html:has(.popup.active) {
 }
 .menu-list-02 .inner-section .parts .part:first-child .comment {
   margin-left: 12px;
-  font-family: "TanTheWhistling";
   font-size: 13px;
   font-weight: 300;
   font-style: italic;
@@ -2166,7 +2191,6 @@ html:has(.popup.active) {
 }
 .menu-list-02 .inner-section .parts.title {
   margin: 20px 0;
-  border-bottom: 1px solid var(--mainColorBlueDark);
 }
 .menu-list-02 .inner-section .parts.title .part .name {
   color: var(--mainColorBlueDark);
@@ -2177,7 +2201,7 @@ html:has(.popup.active) {
 
 @media screen and (max-width: 768px) {
   .menu-list-02 {
-    padding: 20px 16px;
+    padding: 20px 32px;
   }
   .menu-list-02 .inner-section {
     padding: 16px 12px;
@@ -2198,17 +2222,17 @@ html:has(.popup.active) {
     background-size: cover;
   }
   .menu-list-02 .inner-section .parts .part:first-child .name {
-    font-size: 14px;
+    font-size: 16px;
   }
   .menu-list-02 .inner-section .parts .part:first-child .comment {
-    font-size: 10px;
+    font-size: 11px;
     margin-left: 4px;
   }
   .menu-list-02 .inner-section .parts .part:last-child .name {
     font-size: 12px;
   }
   .menu-list-02 .inner-section .parts .part:last-child .comment {
-    font-size: 10px;
+    font-size: 11px;
   }
   .menu-list-02 .inner-section .parts.title .part .name {
     font-size: 16px;

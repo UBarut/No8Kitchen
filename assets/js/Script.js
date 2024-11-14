@@ -146,6 +146,16 @@ function BottoPartAnim() {
     };
 };
 BottoPartAnim();
+function ChangeNavbarHomeName() {
+    //settimeout silinecek
+    setTimeout(() => {
+        if(window.innerWidth < 980 && document.querySelector('#kitchen-no8-header')) {
+            console.log('hello')
+            document.querySelector('#kitchen-no8-header .middle .logo span').innerText = document.querySelector('#kitchen-no8-header .middle .logo span').dataset.mobileName;
+        };
+    }, 1000);
+}
+ChangeNavbarHomeName();
 
 var swiperType01 = new Swiper(".type-01", {
     scrollbar: {

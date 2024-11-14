@@ -356,6 +356,19 @@ nav {
 
         &#kitchen-no8-header {
             .top-nav {
+                .left {
+                    display: none;
+                }
+                .middle {
+                    display: block!important;
+                    margin-left: auto!important;
+                    // margin: 0 auto;
+                    .logo {
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                }
                 .right {
                     .hamburger-menu {
                         display: none!important;
@@ -366,7 +379,7 @@ nav {
                 // position: relative;
                 .logo:first-child {
                     position: absolute;
-                    top: 0;
+                    top: -8px;
                     left: 20px;
                     transform: translateY(50%);
                 }
