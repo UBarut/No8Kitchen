@@ -1687,6 +1687,9 @@ footer .inner-footer .right-part .parts .part .qr-code img {
 .card-list .inner-section.flex-count-1 > div {
   flex: 1 1 100%;
 }
+.card-list .inner-section.flex-count-2 {
+  row-gap: 64px;
+}
 .card-list .inner-section.flex-count-2 > div {
   flex: 1 1 min(50%, var(--card-minWidth));
 }
@@ -2817,6 +2820,27 @@ html:has(.popup.active) {
 .card.type-04 .badge span {
   color: white;
 }
+.card.type-04 .buttons {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4px;
+}
+.card.type-04 .buttons .btn-detail {
+  padding: 12px 20px;
+  background-color: var(--mainColorBlueDark);
+  border-radius: 10px;
+}
+.card.type-04 .buttons .btn-detail span {
+  color: #fff;
+  font-size: 16px;
+}
 
 @media screen and (min-width: 981px) {
   .card.type-04:not(.passive):hover .badge {
@@ -2833,6 +2857,9 @@ html:has(.popup.active) {
     left: 50%;
     transform: translate(-50%, -50%) !important;
   }
+  .card.type-04 .buttons {
+    justify-content: space-between;
+  }
 }
 @media screen and (max-width: 480px) {
   .card.type-04 .badge {
@@ -2844,6 +2871,22 @@ html:has(.popup.active) {
   }
   .card.type-04 .badge i {
     font-size: 20px;
+  }
+  .card.type-04 .buttons {
+    justify-content: space-between;
+  }
+  .card.type-04 .buttons .btn-detail {
+    padding: 6px 8px;
+    border-radius: 6px;
+    max-width: 80px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .card.type-04 .buttons .btn-detail span {
+    font-size: 12px;
   }
 }
 .card.type-05 {

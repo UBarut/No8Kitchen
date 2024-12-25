@@ -102,6 +102,7 @@
             }
 
             &.flex-count-2 {
+                row-gap: 64px;
                 &>div {
                     flex: 1 1 min(50%, var(--card-minWidth));
                 }
